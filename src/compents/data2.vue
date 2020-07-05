@@ -39,6 +39,12 @@
         }],
         loading: true
       };
+    },
+    mounted() {
+      const self = this
+      setTimeout(function(){
+        self.loading = false
+      }, 2000)
     }
   };
 </script>
