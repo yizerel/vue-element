@@ -3,7 +3,7 @@
 <el-container>
 <el-container>
   <el-aside width="200px">
-    <el-menu :default-openeds="['1']">
+    <el-menu :default-openeds="['1','2','3']">
       <el-submenu :index="String(index)" v-for="(subMenuItem, index) in homeInfo.subMenus" :key="index">
         <template slot="title"><i class="el-icon-s-home"></i>{{subMenuItem.subMenuTitle}}</template>
         <el-menu-item-group v-for="(subMenuGroupItem, index2) in subMenuItem.subMenuGroup" :key="index2" :title="subMenuGroupItem.subMenuGroupTitle">
@@ -52,7 +52,7 @@
         msg: "",
         homeInfo:{
           hometitle:'',
-          subMenus: []
+          subMenus: [],
         },
       }
     },
